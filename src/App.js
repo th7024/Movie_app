@@ -7,10 +7,10 @@ class App extends React.Component{
     count: 0
   };
   add =() => {
-    console.log("add");
+    this.setState(current => ({count: current.count + 1})); //setState를 호출할 때 마다 react는 새로운 state와 함께 render 함수를 호출한다.
   };
   minus =() => {
-    console.log("minus");
+    this.setState(current => ({count: current.count - 1}));
   };
   render(){
     return (
