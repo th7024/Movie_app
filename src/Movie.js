@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import "./Movie.css";
 
 //컴포넌트가 state가 필요하지 않은 경우 : function의 형태로 할 수 있음.
 function Movie({ year, title, summary, poster, genres }) {
@@ -13,7 +14,7 @@ function Movie({ year, title, summary, poster, genres }) {
             {genres.map((genre, index) => (
             <li key={index} className="genres_genre">{genre}</li>
             ))}</ul>
-          <p className="movie__summary">{summary}</p>
+          <p className="movie__summary">{summary.slice(0, 180)}...</p>
         </div>
       </div>
     );
